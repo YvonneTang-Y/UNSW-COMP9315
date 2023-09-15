@@ -1,0 +1,2 @@
+join 3 t1_name 0 t2_name
+

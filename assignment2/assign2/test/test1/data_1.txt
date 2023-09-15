@@ -1,0 +1,20 @@
+# comments...
+
+# database_meta number_of_tables
+database_meta 2
+
+# table_meta table_oid table_name number_of_attributes
+table_meta 28 t1_name 4 
+
+# attributes separated by space
+1314 520 8888 2023
+1 5 23 54
+1 2 3 4
+5 78 8 2
+
+# the second table
+table_meta 30 t2_name 2
+
+13 2023
+2 5
+3 2

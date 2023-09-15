@@ -1,0 +1,16 @@
+# comments
+# nattrs = number of attributes
+# query cases for database in data_1.txt
+
+# format:
+# sel attribute_index compared_value operator table_name
+# attribute_index is from 0 to nattrs-1
+# we only consider the "=" operator in this assignment
+
+sel 0 1314 = t1_name
+sel 2 23 = t1_name
+
+# format:
+# join table1_attribute_index table1_name table2_attribute_index table2_name
+join 3 t1_name 1 t2_name
+join 1 t1_name 1 t2_name
