@@ -1,0 +1,10 @@
+
+
+
+These tests will check small queries
+data1 - around 40 geographical coordinates
+data2 - around 100 geographical coordinates 
+queries1 - run some simple quries 
+queries2 - create a hash index and see that method is used
+queries3 - run join, order, group operations
+queries4 - test relational operators 

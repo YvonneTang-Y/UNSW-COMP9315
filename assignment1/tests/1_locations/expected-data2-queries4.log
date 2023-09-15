@@ -1,0 +1,208 @@
+                     coord                      
+------------------------------------------------
+ asmara,15.3333°N,38.9167°E
+ freetown,8.4833°N,13.2331°W
+ vientiane,17.9667°N,102.6000°E
+ jerusalem,31.7833°N,35.2167°E
+ bangui,4.3732°N,18.5628°E
+ panama city,9.0000°N,79.5000°W
+ libreville,0.3901°N,9.4544°E
+ dushanbe,38.5731°N,68.7864°E
+ cotonou,6.4020°N,2.5180°E
+ colombo,6.9167°N,79.8333°E
+ pretoria,25.7464°S,28.1881°E
+ athens,37.9842°N,23.7281°E
+ bujumbura,3.3825°S,29.3611°E
+ rabat,34.0253°N,6.8361°W
+ san salvador,13.6989°N,89.1914°W
+ djibouti,11.5950°N,43.1481°E
+ lisbon,38.7080°N,9.1390°W
+ beirut,33.8869°N,35.5131°E
+ cape town,33.9250°S,18.4250°E
+ dodoma,6.1835°S,35.7460°E
+ bissau,11.8592°N,15.5956°W
+ canberra,35.2931°S,149.1269°E
+ juba,4.8500°N,31.6000°E
+ yamoussoukro,6.8161°N,5.2742°W
+ maseru,29.3100°S,27.4800°E
+ nicosia,35.1725°N,33.3650°E
+ windhoek,22.5700°S,17.0836°E
+ port moresby,9.4789°S,147.1494°E
+ sucre,19.0431°S,65.2592°W
+ nassau,25.0667°N,77.3333°W
+ bloemfontein,29.1000°S,26.2167°E
+ new delhi,28.6139°N,77.2090°E
+ gaborone,24.6569°S,25.9086°E
+ paramaribo,5.8667°N,55.1667°W
+ dili,8.5536°S,125.5783°E
+ san salvador,13.6989°N,89.1914°W
+ male,4.1750°N,73.5083°E
+ georgetown,6.7833°N,58.1667°W
+ gibraltar,36.1324°N,5.3781°W
+ malabo,3.7521°N,8.7737°E
+ manama,26.2250°N,50.5775°E
+ port louis,20.1667°S,57.5000°E
+ willemstad,12.1080°N,68.9350°W
+ papeete,17.5334°S,149.5667°W
+ praia,14.9177°N,23.5092°W
+ sri jayewardenepura kotte,6.9000°N,79.9164°E
+ bridgetown,13.0975°N,59.6167°W
+ moroni,11.7036°S,43.2536°E
+ thimphu,27.4833°N,89.6333°E
+ mbabane,26.3208°S,31.1617°E
+ honiara,9.4333°S,159.9500°E
+ suva,18.1333°S,178.4333°E
+ castries,14.0167°N,60.9833°W
+ hamilton,32.2942°N,64.7839°W
+ bandar seri begawan,4.9167°N,114.9167°E
+ gitega,3.4283°S,29.9250°E
+ port of spain,10.6667°N,61.5167°W
+ apia,13.8333°S,171.8333°W
+ tarawa,1.3382°N,173.0176°E
+ oranjestad,12.5186°N,70.0358°W
+ banjul,13.4531°N,16.5775°W
+ mamoudzou,12.7871°S,45.2750°E
+ majuro,7.0918°N,171.3802°E
+ george town,19.2866°N,81.3744°W
+ victoria,4.6236°S,55.4544°E
+ kingstown,13.1667°N,61.2333°W
+(66 rows)
+
+                 coord                 
+---------------------------------------
+ ottawa,45.4247°N,75.6950°W
+ stockholm,59.3294°N,18.0686°E
+ amsterdam,52.3667°N,4.8833°E
+ zagreb,45.8131°N,15.9772°E
+ saint helier,49.1858°N,2.1100°W
+ winnipeg,49.8844°N,97.1464°W
+ quebec city,46.8139°N,71.2081°W
+ oslo,59.9111°N,10.7528°E
+ helsinki,60.1756°N,24.9342°E
+ skopje,41.9833°N,21.4333°E
+ chisinau,47.0228°N,28.8353°E
+ riga,56.9475°N,24.1069°E
+ saint helier,49.1858°N,2.1100°W
+ vilnius,54.6833°N,25.2833°E
+ dublin,53.3497°N,6.2603°W
+ the hague,52.0800°N,4.3100°E
+ bratislava,48.1447°N,17.1128°E
+ kitchener,43.4186°N,80.4728°W
+ tallinn,59.4372°N,24.7450°E
+ tirana,41.3300°N,19.8200°E
+ wellington,41.2889°S,174.7772°E
+ halifax,44.6475°N,63.5906°W
+ victoria,48.4283°N,123.3647°W
+ ljubljana,46.0500°N,14.5167°E
+ sarajevo,43.8563°N,18.4132°E
+ podgorica,42.4397°N,19.2661°E
+ bern,46.9480°N,7.4474°E
+ luxembourg,49.6106°N,6.1328°E
+ saint helier,49.1858°N,2.1100°W
+ monaco,43.7396°N,7.4069°E
+ saint helier,49.1858°N,2.1100°W
+ douglas,54.1500°N,4.4819°W
+ andorra la vella,42.5000°N,1.5000°E
+(33 rows)
+
+                     coord                      
+------------------------------------------------
+ ottawa,45.4247°N,75.6950°W
+ stockholm,59.3294°N,18.0686°E
+ asmara,15.3333°N,38.9167°E
+ freetown,8.4833°N,13.2331°W
+ vientiane,17.9667°N,102.6000°E
+ jerusalem,31.7833°N,35.2167°E
+ bangui,4.3732°N,18.5628°E
+ panama city,9.0000°N,79.5000°W
+ amsterdam,52.3667°N,4.8833°E
+ libreville,0.3901°N,9.4544°E
+ zagreb,45.8131°N,15.9772°E
+ dushanbe,38.5731°N,68.7864°E
+ cotonou,6.4020°N,2.5180°E
+ colombo,6.9167°N,79.8333°E
+ pretoria,25.7464°S,28.1881°E
+ winnipeg,49.8844°N,97.1464°W
+ quebec city,46.8139°N,71.2081°W
+ oslo,59.9111°N,10.7528°E
+ athens,37.9842°N,23.7281°E
+ bujumbura,3.3825°S,29.3611°E
+ helsinki,60.1756°N,24.9342°E
+ skopje,41.9833°N,21.4333°E
+ chisinau,47.0228°N,28.8353°E
+ riga,56.9475°N,24.1069°E
+ rabat,34.0253°N,6.8361°W
+ vilnius,54.6833°N,25.2833°E
+ san salvador,13.6989°N,89.1914°W
+ djibouti,11.5950°N,43.1481°E
+ dublin,53.3497°N,6.2603°W
+ the hague,52.0800°N,4.3100°E
+ lisbon,38.7080°N,9.1390°W
+ bratislava,48.1447°N,17.1128°E
+ kitchener,43.4186°N,80.4728°W
+ tallinn,59.4372°N,24.7450°E
+ beirut,33.8869°N,35.5131°E
+ cape town,33.9250°S,18.4250°E
+ tirana,41.3300°N,19.8200°E
+ wellington,41.2889°S,174.7772°E
+ dodoma,6.1835°S,35.7460°E
+ halifax,44.6475°N,63.5906°W
+ bissau,11.8592°N,15.5956°W
+ canberra,35.2931°S,149.1269°E
+ juba,4.8500°N,31.6000°E
+ yamoussoukro,6.8161°N,5.2742°W
+ victoria,48.4283°N,123.3647°W
+ maseru,29.3100°S,27.4800°E
+ nicosia,35.1725°N,33.3650°E
+ windhoek,22.5700°S,17.0836°E
+ port moresby,9.4789°S,147.1494°E
+ sucre,19.0431°S,65.2592°W
+ ljubljana,46.0500°N,14.5167°E
+ sarajevo,43.8563°N,18.4132°E
+ nassau,25.0667°N,77.3333°W
+ bloemfontein,29.1000°S,26.2167°E
+ new delhi,28.6139°N,77.2090°E
+ gaborone,24.6569°S,25.9086°E
+ paramaribo,5.8667°N,55.1667°W
+ dili,8.5536°S,125.5783°E
+ san salvador,13.6989°N,89.1914°W
+ male,4.1750°N,73.5083°E
+ georgetown,6.7833°N,58.1667°W
+ gibraltar,36.1324°N,5.3781°W
+ malabo,3.7521°N,8.7737°E
+ podgorica,42.4397°N,19.2661°E
+ manama,26.2250°N,50.5775°E
+ port louis,20.1667°S,57.5000°E
+ willemstad,12.1080°N,68.9350°W
+ bern,46.9480°N,7.4474°E
+ papeete,17.5334°S,149.5667°W
+ luxembourg,49.6106°N,6.1328°E
+ praia,14.9177°N,23.5092°W
+ sri jayewardenepura kotte,6.9000°N,79.9164°E
+ bridgetown,13.0975°N,59.6167°W
+ moroni,11.7036°S,43.2536°E
+ thimphu,27.4833°N,89.6333°E
+ mbabane,26.3208°S,31.1617°E
+ honiara,9.4333°S,159.9500°E
+ suva,18.1333°S,178.4333°E
+ ankara,39.9300°N,32.8500°E
+ castries,14.0167°N,60.9833°W
+ hamilton,32.2942°N,64.7839°W
+ bandar seri begawan,4.9167°N,114.9167°E
+ monaco,43.7396°N,7.4069°E
+ gitega,3.4283°S,29.9250°E
+ port of spain,10.6667°N,61.5167°W
+ apia,13.8333°S,171.8333°W
+ tarawa,1.3382°N,173.0176°E
+ oranjestad,12.5186°N,70.0358°W
+ banjul,13.4531°N,16.5775°W
+ mamoudzou,12.7871°S,45.2750°E
+ majuro,7.0918°N,171.3802°E
+ douglas,54.1500°N,4.4819°W
+ george town,19.2866°N,81.3744°W
+ victoria,4.6236°S,55.4544°E
+ kingstown,13.1667°N,61.2333°W
+ andorra la vella,42.5000°N,1.5000°E
+(96 rows)
+
+

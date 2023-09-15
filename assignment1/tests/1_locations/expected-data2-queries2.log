@@ -1,0 +1,24 @@
+CREATE INDEX
+ count 
+-------
+     4
+(1 row)
+
+ lid |               coord               
+-----+-----------------------------------
+  13 | saint helier,49.1858°N,2.1100°W
+  26 | saint helier,49.1858°N,2.1100°W
+  83 | saint helier,49.1858°N,2.1100°W
+  92 | saint helier,49.1858°N,2.1100°W
+(4 rows)
+
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Seq Scan on locations  (REMOVED_TIME rows=1 REMOVED_WIDTH) (REMOVED_TIME rows=4 loops=1)
+   Filter:REMOVED_GCOORD
+   Rows Removed by Filter: 96
+REMOVED_TIME
+REMOVED_TIME
+(5 rows)
+
+

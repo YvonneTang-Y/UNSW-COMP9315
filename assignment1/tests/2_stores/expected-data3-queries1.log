@@ -1,0 +1,25 @@
+CREATE INDEX
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on storeinfo  (REMOVED_TIME rows=51 REMOVED_WIDTH) (REMOVED_TIME rows=1 loops=1)
+   Recheck Cond:REMOVED_GCOORD
+   Heap Blocks: exact=1
+   ->  Bitmap Index Scan on hash_file  (REMOVED_TIME rows=51 REMOVED_WIDTH) (REMOVED_TIME rows=1 loops=1)
+         Index Cond:REMOVED_GCOORD
+REMOVED_TIME
+REMOVED_TIME
+(7 rows)
+
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Bitmap Heap Scan on storeinfo  (REMOVED_TIME rows=51 REMOVED_WIDTH) (REMOVED_TIME rows=1 loops=1)
+   Recheck Cond:REMOVED_GCOORD
+   Heap Blocks: exact=1
+   ->  Bitmap Index Scan on hash_file  (REMOVED_TIME rows=51 REMOVED_WIDTH) (REMOVED_TIME rows=1 loops=1)
+         Index Cond:REMOVED_GCOORD
+REMOVED_TIME
+REMOVED_TIME
+(7 rows)
+
+DROP INDEX
+

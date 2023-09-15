@@ -1,0 +1,9 @@
+
+
+
+These tests will check how well your GeoCoord type can handle increasingly large amounts of data
+data1 - around 100 random names
+data2 - around 1000 random names
+data3 - around 10000 random names
+queries1 - create a hash index and observe what method is used to find rows (sometimes PostgreSQL will pick a different searching method)
+queries2 - run some complex queries on the table

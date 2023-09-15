@@ -1,0 +1,95 @@
+struct GeoCoord {
+    char* LocationName;
+    double Latitude;
+    double Longitude;
+};
+
+struct GeoCoord* checkGeoCoord(char* str);
+
+#include <regex.h>
+#include <stdio.h>
+
+struct GeoCoord* checkGeoCoord(char* str) {
+    regex_t regex;
+    int reti;
+    char msgbuf[100];
+
+    reti = regcomp(&regex, "([[:alpha:]]+\\s*)+,\\s*(-?\\d+(\\.\\d+)?)[° ]([NS]),\\s*(-?\\d+(\\.\\d+)?)[° ]([EW])", REG_EXTENDED);
+    if (reti) {
+        fprintf(stderr, "Could not compile regex\n");
+        return NULL;
+    }
+
+    regmatch_t pmatch[8];
+    reti = regexec(&regex, str, 8, pmatch, 0);
+    if (reti == REG_NOMATCH) {
+        fprintf(stderr, "No match\n");
+        return NULL;
+    } else if (reti) {
+        regerror(reti, &regex, msgbuf, sizeof(msgbuf));
+        fprintf(stderr, "Regex match failed: %s\n", msgbuf);
+        return NULL;
+    }
+
+    char locationName[100];
+    char latDir;
+    char longDir;
+    double latitude;
+    double longitude;
+
+    sscanf(str + pmatch[1].rm_so, "%[^,]", locationName);
+    sscanf(str + pmatch[4].rm_so, "%lf%c", &latitude, &latDir);
+    sscanf(str + pmatch[7].rm_so, "%lf%c", &longitude, &longDir);
+
+    struct GeoCoord* geoCoord = (struct GeoCoord*)malloc(sizeof(struct GeoCoord));
+    geoCoord->LocationName = (char*)malloc(strlen(locationName) + 1);
+    strcpy(geoCoord->LocationName, locationName);
+    geoCoord->Latitude = (latDir == 'N' ? latitude : -latitude);
+    geoCoord->Longitude = (longDir == 'E' ? longitude : -longitude);
+
+    regfree(&regex);
+    return geoCoord;
+}
+
+int main() {
+    char str[100];
+    printf("Enter GeoCoord: ");
+    fgets(str, 100, stdin);
+
+    struct GeoCoord* geoCoord = checkGeoCoord(str);
+    if (geoCoord == NULL) {
+        printf("Invalid input\n");
+    } else {
+        printf("Valid input: LocationName=%s, Latitude=%lf, Longitude=%lf\n", geoCoord->LocationName, geoCoord->Latitude, geoCoord->Longitude);
+        free(geoCoord->
+
+
+
+CREATE FUNCTION gcoord_out(GeoCoord)
+   RETURNS cstring
+   AS '_OBJWD_/gcoord'
+   LANGUAGE C IMMUTABLE STRICT;
+
+
+-- now, we can create the type. The internallength specifies the size of the
+-- memory block required to hold the type (we need two 8-byte doubles).
+
+CREATE TYPE GeoCoord (
+   internallength = 282,
+   input = gcoord_in,
+   output = gcoord_out
+);
+
+
+
+create table StoreInfo (
+   id  integer primary key,
+   location GeoCoord
+);
+
+-- data for user-defined types are just strings in the proper textual
+-- representation.
+
+insert into StoreInfo(id, location) values
+(1,'Sydney,33.86°S,151.21°E'),
+(2,'Melbourne,37.84°S,144.95°E');

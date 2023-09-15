@@ -1,0 +1,51 @@
+ count 
+-------
+ 10153
+(1 row)
+
+ sid |    name    |  opendate  |           coord           
+-----+------------+------------+---------------------------
+  12 | Store_xedn | 2017-02-01 | sale,34.0500°N,6.8167°W
+(1 row)
+
+ sid |    name    |  opendate  |            coord             
+-----+------------+------------+------------------------------
+ 693 | Store_f92s | 1986-11-01 | hrodna,53.6667°N,23.8167°E
+(1 row)
+
+ sid  |    name    |  opendate  |               coord                
+------+------------+------------+------------------------------------
+  290 | Store_oz0d | 1976-09-21 | new haven,41.3112°N,72.9246°W
+  597 | Store_oz0d | 1995-02-28 | sandakan,5.8388°N,118.1173°E
+  691 | Store_oz0d | 2011-08-17 | wudalianchi,48.6433°N,126.1408°E
+ 6365 | Store_oz0d | 1998-12-08 | plainedge,40.7240°N,73.4770°W
+ 6458 | Store_oz0d | 1989-01-19 | riverside,40.0358°N,74.9564°W
+ 6550 | Store_oz0d | 1992-08-28 | folcroft,39.8891°N,75.2770°W
+ 7947 | Store_oz0d | 2019-05-16 | delmenhorst,53.0506°N,8.6317°E
+(7 rows)
+
+                  coords                  | count 
+------------------------------------------+-------
+ yakima,46.5923°N,120.5496°W            |     3
+ comodoro rivadavia,45.8667°S,67.5000°W |     3
+ barnstable,41.6722°N,70.3599°W         |     3
+ cranbourne,38.0996°S,145.2834°E        |     3
+ bo,7.9564°N,11.7400°W                  |     3
+ tampere,61.4981°N,23.7600°E            |     2
+ surgut,61.2500°N,73.4333°E             |     2
+ kouvola,60.8681°N,26.7042°E            |     2
+ karlstad,59.3808°N,13.5016°E           |     2
+ pervouralsk,56.9167°N,59.9500°E        |     2
+ cheboksary,56.1333°N,47.2500°E         |     2
+ moskovskiy,55.5991°N,37.3550°E         |     2
+ kanash,55.5167°N,47.5000°E             |     2
+ miass,55.0500°N,60.1000°E              |     2
+ darlington,54.5270°N,1.5526°W          |     2
+ desnogorsk,54.1531°N,33.2903°E         |     2
+ drogheda,53.7139°N,6.3503°W            |     2
+ tolyatti,53.5167°N,49.4167°E           |     2
+ droylsden,53.4828°N,2.1582°W           |     2
+ rudnyy,52.9527°N,63.1300°E             |     2
+(20 rows)
+
+

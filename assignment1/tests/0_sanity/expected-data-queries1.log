@@ -1,0 +1,54 @@
+
+-- Checking valid GeoCoord ...
+
+          convert_string          
+----------------------------------
+ melbourne,37.8400°S,144.9500°E
+(1 row)
+
+         convert_string         
+--------------------------------
+ stamford,41.1000°N,73.5500°W
+(1 row)
+
+               convert_string               
+--------------------------------------------
+ cholula de rivadabia,19.0633°N,98.3064°W
+(1 row)
+
+         convert_string          
+---------------------------------
+ elizabeth,40.6600°N,74.1900°W
+(1 row)
+
+           convert_string           
+------------------------------------
+ spanish town,17.9961°N,76.9547°W
+(1 row)
+
+        convert_string         
+-------------------------------
+ formosa,15.0000°S,47.0000°W
+(1 row)
+
+        convert_string         
+-------------------------------
+ rayleigh,51.5800°N,0.6049°E
+(1 row)
+
+          convert_string           
+-----------------------------------
+ san angelo,31.4400°N,100.4500°W
+(1 row)
+
+           convert_string            
+-------------------------------------
+ santa monica,34.0232°N,118.4813°W
+(1 row)
+
+         convert_string          
+---------------------------------
+ tangxing,35.7200°N,111.7108°E
+(1 row)
+
+

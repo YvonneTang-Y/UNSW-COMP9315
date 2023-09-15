@@ -1,0 +1,92 @@
+               coord                
+------------------------------------
+ asmara,15.3333°N,38.9167°E
+ freetown,8.4833°N,13.2331°W
+ vientiane,17.9667°N,102.6000°E
+ jerusalem,31.7833°N,35.2167°E
+ bangui,4.3732°N,18.5628°E
+ panama city,9.0000°N,79.5000°W
+ libreville,0.3901°N,9.4544°E
+ dushanbe,38.5731°N,68.7864°E
+ lilongwe,13.9833°S,33.7833°E
+ cotonou,6.4020°N,2.5180°E
+ colombo,6.9167°N,79.8333°E
+ pretoria,25.7464°S,28.1881°E
+ athens,37.9842°N,23.7281°E
+ bujumbura,3.3825°S,29.3611°E
+ kingston,17.9714°N,76.7931°W
+ rabat,34.0253°N,6.8361°W
+ san salvador,13.6989°N,89.1914°W
+ djibouti,11.5950°N,43.1481°E
+ lisbon,38.7080°N,9.1390°W
+ beirut,33.8869°N,35.5131°E
+ cape town,33.9250°S,18.4250°E
+(21 rows)
+
+               coord               
+-----------------------------------
+ ottawa,45.4247°N,75.6950°W
+ stockholm,59.3294°N,18.0686°E
+ amsterdam,52.3667°N,4.8833°E
+ zagreb,45.8131°N,15.9772°E
+ winnipeg,49.8844°N,97.1464°W
+ quebec city,46.8139°N,71.2081°W
+ oslo,59.9111°N,10.7528°E
+ helsinki,60.1756°N,24.9342°E
+ skopje,41.9833°N,21.4333°E
+ saint helier,49.1858°N,2.1100°W
+ riga,56.9475°N,24.1069°E
+ vilnius,54.6833°N,25.2833°E
+ dublin,53.3497°N,6.2603°W
+ the hague,52.0800°N,4.3100°E
+ bratislava,48.1447°N,17.1128°E
+ kitchener,43.4186°N,80.4728°W
+ tallinn,59.4372°N,24.7450°E
+ tirana,41.3300°N,19.8200°E
+ wellington,41.2889°S,174.7772°E
+(19 rows)
+
+               coord                
+------------------------------------
+ ottawa,45.4247°N,75.6950°W
+ stockholm,59.3294°N,18.0686°E
+ asmara,15.3333°N,38.9167°E
+ freetown,8.4833°N,13.2331°W
+ vientiane,17.9667°N,102.6000°E
+ jerusalem,31.7833°N,35.2167°E
+ bangui,4.3732°N,18.5628°E
+ panama city,9.0000°N,79.5000°W
+ amsterdam,52.3667°N,4.8833°E
+ libreville,0.3901°N,9.4544°E
+ zagreb,45.8131°N,15.9772°E
+ dushanbe,38.5731°N,68.7864°E
+ lilongwe,13.9833°S,33.7833°E
+ cotonou,6.4020°N,2.5180°E
+ colombo,6.9167°N,79.8333°E
+ pretoria,25.7464°S,28.1881°E
+ winnipeg,49.8844°N,97.1464°W
+ quebec city,46.8139°N,71.2081°W
+ oslo,59.9111°N,10.7528°E
+ athens,37.9842°N,23.7281°E
+ bujumbura,3.3825°S,29.3611°E
+ helsinki,60.1756°N,24.9342°E
+ skopje,41.9833°N,21.4333°E
+ riga,56.9475°N,24.1069°E
+ kingston,17.9714°N,76.7931°W
+ rabat,34.0253°N,6.8361°W
+ vilnius,54.6833°N,25.2833°E
+ san salvador,13.6989°N,89.1914°W
+ djibouti,11.5950°N,43.1481°E
+ dublin,53.3497°N,6.2603°W
+ the hague,52.0800°N,4.3100°E
+ lisbon,38.7080°N,9.1390°W
+ bratislava,48.1447°N,17.1128°E
+ kitchener,43.4186°N,80.4728°W
+ tallinn,59.4372°N,24.7450°E
+ beirut,33.8869°N,35.5131°E
+ cape town,33.9250°S,18.4250°E
+ tirana,41.3300°N,19.8200°E
+ wellington,41.2889°S,174.7772°E
+(39 rows)
+
+

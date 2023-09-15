@@ -1,0 +1,21 @@
+CREATE INDEX
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Seq Scan on storeinfo  (REMOVED_TIME rows=1 REMOVED_WIDTH) (REMOVED_TIME rows=0 loops=1)
+   Filter:REMOVED_GCOORD
+   Rows Removed by Filter: 100
+REMOVED_TIME
+REMOVED_TIME
+(5 rows)
+
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Seq Scan on storeinfo  (REMOVED_TIME rows=1 REMOVED_WIDTH) (REMOVED_TIME rows=0 loops=1)
+   Filter:REMOVED_GCOORD
+   Rows Removed by Filter: 100
+REMOVED_TIME
+REMOVED_TIME
+(5 rows)
+
+DROP INDEX
+

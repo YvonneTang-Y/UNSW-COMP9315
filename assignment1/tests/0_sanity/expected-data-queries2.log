@@ -1,0 +1,31 @@
+
+-- Checking invalid GeoCoord ...
+
+psql:/REMOVED_PATH/queries2.sql:5: ERROR:  invalid input syntax for type GeoCoord: " Melbourne,37.84°S,144.95°E"
+LINE 1: select ' Melbourne,37.84°S,144.95°E'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:6: ERROR:  invalid input syntax for type GeoCoord: "Melbourne ,37.84°S,144.95°E"
+LINE 1: select 'Melbourne ,37.84°S,144.95°E'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:7: ERROR:  invalid input syntax for type GeoCoord: "Melbourne,37.84°S 1144.95°E"
+LINE 1: select 'Melbourne,37.84°S 1144.95°E'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:8: ERROR:  invalid input syntax for type GeoCoord: "Melbourne,3.7.84°S 144.95°E"
+LINE 1: select 'Melbourne,3.7.84°S 144.95°E'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:9: ERROR:  invalid input syntax for type GeoCoord: "Melbourne,-3.7.84°S 144.95°E"
+LINE 1: select 'Melbourne,-3.7.84°S 144.95°E'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:11: ERROR:  invalid input syntax for type GeoCoord: "Santa-Monica,118.4813°W 34.0232°N"
+LINE 1: select 'Santa-Monica,118.4813°W 34.0232°N'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:12: ERROR:  invalid input syntax for type GeoCoord: "Santa-Monica,118.4813°N 34.0232°W"
+LINE 1: select 'Santa-Monica,118.4813°N 34.0232°W'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:13: ERROR:  invalid input syntax for type GeoCoord: "Tangxing,35.72°N, 111.7108°N"
+LINE 1: select 'Tangxing,35.72°N, 111.7108°N'::GeoCoord;
+               ^
+psql:/REMOVED_PATH/queries2.sql:14: ERROR:  invalid input syntax for type GeoCoord: "Tangxing,35.72°N,111.7108°"
+LINE 1: select 'Tangxing,35.72°N,111.7108°'::GeoCoord;
+               ^
+

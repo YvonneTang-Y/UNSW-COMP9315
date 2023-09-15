@@ -1,0 +1,89 @@
+           convert_string           
+------------------------------------
+ helsinki,60.1756°N,24.9342°E
+ oslo,59.9111°N,10.7528°E
+ tallinn,59.4372°N,24.7450°E
+ stockholm,59.3294°N,18.0686°E
+ riga,56.9475°N,24.1069°E
+ vilnius,54.6833°N,25.2833°E
+ dublin,53.3497°N,6.2603°W
+ amsterdam,52.3667°N,4.8833°E
+ the hague,52.0800°N,4.3100°E
+ winnipeg,49.8844°N,97.1464°W
+ saint helier,49.1858°N,2.1100°W
+ bratislava,48.1447°N,17.1128°E
+ quebec city,46.8139°N,71.2081°W
+ zagreb,45.8131°N,15.9772°E
+ ottawa,45.4247°N,75.6950°W
+ kitchener,43.4186°N,80.4728°W
+ skopje,41.9833°N,21.4333°E
+ tirana,41.3300°N,19.8200°E
+ wellington,41.2889°S,174.7772°E
+ lisbon,38.7080°N,9.1390°W
+ dushanbe,38.5731°N,68.7864°E
+ athens,37.9842°N,23.7281°E
+ rabat,34.0253°N,6.8361°W
+ cape town,33.9250°S,18.4250°E
+ beirut,33.8869°N,35.5131°E
+ jerusalem,31.7833°N,35.2167°E
+ pretoria,25.7464°S,28.1881°E
+ kingston,17.9714°N,76.7931°W
+ vientiane,17.9667°N,102.6000°E
+ asmara,15.3333°N,38.9167°E
+ lilongwe,13.9833°S,33.7833°E
+ san salvador,13.6989°N,89.1914°W
+ djibouti,11.5950°N,43.1481°E
+ panama city,9.0000°N,79.5000°W
+ freetown,8.4833°N,13.2331°W
+ colombo,6.9167°N,79.8333°E
+ cotonou,6.4020°N,2.5180°E
+ bangui,4.3732°N,18.5628°E
+ bujumbura,3.3825°S,29.3611°E
+ libreville,0.3901°N,9.4544°E
+(40 rows)
+
+               coords               | count 
+------------------------------------+-------
+ helsinki,60.1756°N,24.9342°E     |     1
+ oslo,59.9111°N,10.7528°E         |     1
+ tallinn,59.4372°N,24.7450°E      |     1
+ stockholm,59.3294°N,18.0686°E    |     1
+ riga,56.9475°N,24.1069°E         |     1
+ vilnius,54.6833°N,25.2833°E      |     1
+ dublin,53.3497°N,6.2603°W        |     1
+ amsterdam,52.3667°N,4.8833°E     |     1
+ the hague,52.0800°N,4.3100°E     |     1
+ winnipeg,49.8844°N,97.1464°W     |     1
+ saint helier,49.1858°N,2.1100°W  |     1
+ bratislava,48.1447°N,17.1128°E   |     1
+ quebec city,46.8139°N,71.2081°W  |     1
+ zagreb,45.8131°N,15.9772°E       |     1
+ ottawa,45.4247°N,75.6950°W       |     1
+ kitchener,43.4186°N,80.4728°W    |     1
+ skopje,41.9833°N,21.4333°E       |     1
+ tirana,41.3300°N,19.8200°E       |     1
+ wellington,41.2889°S,174.7772°E  |     1
+ lisbon,38.7080°N,9.1390°W        |     1
+ dushanbe,38.5731°N,68.7864°E     |     1
+ athens,37.9842°N,23.7281°E       |     1
+ rabat,34.0253°N,6.8361°W         |     1
+ cape town,33.9250°S,18.4250°E    |     1
+ beirut,33.8869°N,35.5131°E       |     1
+ jerusalem,31.7833°N,35.2167°E    |     1
+ pretoria,25.7464°S,28.1881°E     |     1
+ kingston,17.9714°N,76.7931°W     |     1
+ vientiane,17.9667°N,102.6000°E   |     1
+ asmara,15.3333°N,38.9167°E       |     1
+ lilongwe,13.9833°S,33.7833°E     |     1
+ san salvador,13.6989°N,89.1914°W |     1
+ djibouti,11.5950°N,43.1481°E     |     1
+ panama city,9.0000°N,79.5000°W   |     1
+ freetown,8.4833°N,13.2331°W      |     1
+ colombo,6.9167°N,79.8333°E       |     1
+ cotonou,6.4020°N,2.5180°E        |     1
+ bangui,4.3732°N,18.5628°E        |     1
+ bujumbura,3.3825°S,29.3611°E     |     1
+ libreville,0.3901°N,9.4544°E     |     1
+(40 rows)
+
+

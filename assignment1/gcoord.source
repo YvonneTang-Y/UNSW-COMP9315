@@ -1,0 +1,175 @@
+---------------------------------------------------------------------------
+--
+-- gcoord.sql-
+--    This file shows how to create a new user-defined type and how to
+--    use this new type.
+--
+--
+-- Portions Copyright (c) 1996-2022, PostgreSQL Global Development Group
+-- Portions Copyright (c) 1994, Regents of the University of California
+--
+-- src/tutorial/gcoord.source
+--
+---------------------------------------------------------------------------
+
+-----------------------------
+-- Creating a new type:
+--	We are going to create a new type called 'GeoCoord' which represents
+--	geographical coordinates.
+--	A user-defined type must have an input and an output function, and
+--	optionally can have binary input and output functions.  All of these
+--	are usually user-defined C functions.
+-----------------------------
+
+-- Assume the user defined functions are in _OBJWD_/gcoord$DLSUFFIX
+-- (we do not want to assume this is in the dynamic loader search path).
+-- Look at $PWD/gcoord.c for the source.  Note that we declare all of
+-- them as STRICT, so we do not need to cope with NULL inputs in the
+-- C code.  We also mark them IMMUTABLE, since they always return the
+-- same outputs given the same inputs.
+
+-- the input function 'gcoord_in' takes a null-terminated string (the
+-- textual representation of the type) and turns it into the internal
+-- (in memory) representation. You will get a message telling you 'gcoord'
+-- does not exist yet but that's okay.
+
+CREATE FUNCTION gcoord_in(cstring)
+   RETURNS GeoCoord
+   AS '_OBJWD_/gcoord'
+   LANGUAGE C IMMUTABLE STRICT;
+
+-- the output function 'gcoord_out' takes the internal representation and
+-- converts it into the textual representation.
+
+CREATE FUNCTION gcoord_out(GeoCoord)
+   RETURNS cstring
+   AS '_OBJWD_/gcoord'
+   LANGUAGE C IMMUTABLE STRICT;
+
+
+-- the binary input function 'coord_recv' takes a StringInfo buffer
+-- and turns its contents into the internal representation.
+
+CREATE FUNCTION gcoord_recv(internal)
+   RETURNS GeoCoord
+   AS '_OBJWD_/gcoord'
+   LANGUAGE C IMMUTABLE STRICT;
+
+-- the binary output function 'gcoord_send' takes the internal representation
+-- and converts it into a (hopefully) platform-independent bytea string.
+
+CREATE FUNCTION gcoord_send(GeoCoord)
+   RETURNS bytea
+   AS '_OBJWD_/gcoord'
+   LANGUAGE C IMMUTABLE STRICT;
+
+
+-- now, we can create the type. The internallength specifies the size of the
+-- memory block required to hold the type (variable for GeoCoord).
+
+CREATE TYPE GeoCoord (
+   internallength = variable,
+   input = gcoord_in,
+   output = gcoord_out,
+   receive = gcoord_recv,
+   send = gcoord_send
+);
+
+-- Convert2DMS is a function
+CREATE FUNCTION Convert2DMS(GeoCoord) RETURNS cstring
+   AS '_OBJWD_/gcoord', 'convert_dms' LANGUAGE C IMMUTABLE STRICT;
+
+
+-----------------------------
+-- Interfacing New Types with Indexes:
+--	We cannot define a secondary index (eg. a B-tree) over the new type
+--	yet. We need to create all the required operators and support
+--      functions, then we can make the operator class.
+-----------------------------
+
+-- first, define the required operators
+CREATE FUNCTION gcoord_lt(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_le(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_eq(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_ge(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_gt(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_neq(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_zeq(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+CREATE FUNCTION gcoord_zneq(GeoCoord, GeoCoord) RETURNS bool
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;   
+
+
+
+CREATE OPERATOR < (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_lt,
+   commutator = > , negator = >= ,
+   restrict = scalarltsel, join = scalarltjoinsel
+);
+CREATE OPERATOR <= (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_le,
+   commutator = >= , negator = > ,
+   restrict = scalarlesel, join = scalarlejoinsel
+);
+CREATE OPERATOR = (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_eq,
+   commutator = = , negator = <> ,
+   restrict = eqsel, join = eqjoinsel
+);
+CREATE OPERATOR <> (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_neq,
+   commutator = <> , negator = = ,
+   restrict = neqsel, join = neqjoinsel
+);
+CREATE OPERATOR >= (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_ge,
+   commutator = <= , negator = < ,
+   restrict = scalargesel, join = scalargejoinsel
+);
+CREATE OPERATOR > (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_gt,
+   commutator = < , negator = <= ,
+   restrict = scalargtsel, join = scalargtjoinsel
+);
+CREATE OPERATOR ~ (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_zeq,
+   commutator = ~ , negator = !~ ,
+   restrict = eqsel, join = eqjoinsel
+);
+CREATE OPERATOR !~ (
+   leftarg = GeoCoord, rightarg = GeoCoord, procedure = gcoord_zneq,
+   commutator = !~ , negator = ~ ,
+   restrict = neqsel, join = neqjoinsel
+);
+
+
+
+-- create the support function too
+CREATE FUNCTION gcoord_cmp(GeoCoord, GeoCoord) RETURNS int4
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+
+CREATE FUNCTION gcoord_hash(GeoCoord) RETURNS int4
+   AS '_OBJWD_/gcoord' LANGUAGE C IMMUTABLE STRICT;
+
+-- now we can make the operator class
+CREATE OPERATOR CLASS gcoord_ops
+    DEFAULT FOR TYPE GeoCoord USING btree AS
+        OPERATOR        1       < ,
+        OPERATOR        2       <= ,
+        OPERATOR        3       = ,
+        OPERATOR        4       >= ,
+        OPERATOR        5       > ,
+        FUNCTION        1       gcoord_cmp(GeoCoord, GeoCoord);
+
+
+-- create hash index
+CREATE OPERATOR CLASS gcoord_hash_ops
+    DEFAULT FOR TYPE GeoCoord USING hash AS
+        OPERATOR        1       = ,
+        FUNCTION        1       gcoord_hash(GeoCoord);        

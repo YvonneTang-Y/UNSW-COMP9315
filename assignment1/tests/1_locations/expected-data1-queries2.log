@@ -1,0 +1,21 @@
+CREATE INDEX
+ count 
+-------
+     1
+(1 row)
+
+ lid |               coord               
+-----+-----------------------------------
+  24 | saint helier,49.1858°N,2.1100°W
+(1 row)
+
+                                             QUERY PLAN                                             
+----------------------------------------------------------------------------------------------------
+ Seq Scan on locations  (REMOVED_TIME rows=1 REMOVED_WIDTH) (REMOVED_TIME rows=1 loops=1)
+   Filter:REMOVED_GCOORD
+   Rows Removed by Filter: 39
+REMOVED_TIME
+REMOVED_TIME
+(5 rows)
+
+

@@ -1,0 +1,9 @@
+
+
+
+These tests will check if you have basic functionality for the GeoCoord type
+queries1 - Will your GeoCoord type accept valid input?
+queries2 - Will your GeoCoord type reject invald input?
+queries3 - Will your GeoCoord type correctly identify True operatons?
+queries4 - Will your GeoCoord type correclty identify False operations?
+queries5 - Will your GeoCoord type correclty print the Convert2DMS()?
