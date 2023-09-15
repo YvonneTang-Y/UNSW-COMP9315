@@ -1,0 +1,28 @@
+Representing: 1000*10**001*101
+
+Represent each bit by a char
+
+"1000*10**001*101" (as a string)  (17 bytes, incl '\0')
+
+
+
+
+Representing: 1000*10**001*101
+
+Use 2-bit-encoding 00 = 0, 01 = 1, 11 = *
+
+01000000110100111100000111010001
+
+Clearly, twice as long as original hash  (4 bytes)
+
+
+
+
+Representing: 1000*10**001*101
+
+Using 2 bit-strings, one for real hash bit, one for *'s
+
+1000010000010101   real hash bits   (2 bytes)
+0000100110001000   stars            (2 bytes)
+
+Similarly, twice as long as original hash  (4 bytes)

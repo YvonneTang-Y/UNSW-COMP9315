@@ -1,0 +1,29 @@
+Consider relation Person(name,gender,age) ...
+
+How many bits to use for each attribute?
+
+
+0.6 ... select * from Person where name=X
+0.3 ... select * from Person where gender=X
+0.1 ... select * from Person where gender=X and age=Y
+
+Assume b = 128, d = 7 bits
+
+name: domain:huge ... used in 0.6 queries => 4 bits
+
+gender: domain:4 ... max 2 bits ... used in 0.4 queries => 2 bits
+
+age: domain:128 ... max 7 bits ... used in 0.1 queries => 1 bits
+
+
+if d_name=4, d_gender=2, d_age=1
+
+Avg Cost = 0.6 * 2^3 + 0.3 * 2^5 + 0.1 * 2^4 = 16
+
+
+cv = <(0,0), (0,1), (0,2), (0,3), (1,0), (1,1), (2,0), ....>
+
+
+if d_name=5, d_gender=1, d_age=1
+
+Avg Cost = 0.6 * 2^2 + 0.3 * 2^6 + 0.1 * 2^5 = 25

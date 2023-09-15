@@ -1,0 +1,16 @@
+You can find the data structures definitions in
+
+HeapTupleData
+.../src/include/access/htup.h
+
+HeapTupleHeaderData
+.../src/include/access/htup_details.h
+
+HeapTupleFields
+.../src/include/access/htup_details.h
+
+TupleDescData
+.../src/include/access/tupdesc.h
+
+Formdata_pg_Attribute
+.../src/include/catalog/pg_attribute.h

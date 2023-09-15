@@ -1,0 +1,38 @@
+File: b=5 (#pages),  c=4 (max tuples/page)
+
+----------
+
+select * from R where k = 24
+
+lo=0, hi=4, mid= 2
+	searchBucket(2) -> (k=24,20,26)
+
+----------
+
+select * from R where k = 3
+
+lo=0, hi=4, mid= 2
+	searchBucket(2) -> (null,20,26)
+
+lo=0, hi=1, mid= 0
+	searchBucket(0) -> (k=3,1,7)
+
+----------
+
+select * from R where k = 14
+
+lo=0, hi=4, mid= 2
+	searchBucket(2) -> (null,20,26)
+
+lo=0, hi=1, mid= 0
+	searchBucket(0) -> (null,1,7)
+
+	searchBucket(1) -> (null,10,19)
+
+----------
+
+select max(k) from R
+
+searchBucket(4) -> (null,40,61)
+
+select * from R where k = 61

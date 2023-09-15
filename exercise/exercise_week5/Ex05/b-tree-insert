@@ -1,0 +1,41 @@
+Initially empty B-tree with c_i = 4
+
+Show how the tree grows as we add the following key values
+
+100, 50, 80, 200, 20, 65, 150, 120, 110, 75, 10, 180, ...
+
+
+Insert 100 ... root node = (100,-,-,-)
+
+Insert 50 ... root node = (50,100,-,-)
+
+Insert 80 ... root node = (50,80,100,-)
+
+Insert 200 ... root node = (50,80,100,200)
+
+Insert 20 ... node is full => split  20 (50,80,100,200)
+
+root node = (80,-,-,-), left child = (20,50,-,-), right child = (100,200,-,-)
+
+Insert 65 ... left child = (20,50,65,-)
+
+Insert 150 ... right child = (100,150,200,-)
+
+Insert 110 ... right child = (100,110,150,200)
+
+Insert 75 ... left child = (20,50,65,75)
+
+Insert 10 ... left child is full => split 10 (20,50,65,75)
+
+root node = (50,80,-,-)
+left child = (10,20,-,-)
+mid child = (65,75,-,-)
+right child = (100,110,150,200)
+
+Insert 180 ... right child is full => split (100,110,150,180,200)
+
+root node = (50,80,150,-)
+left child = (50,80,-,-)
+left-mid child = (65,75,-,-)
+right-mid child = (100,110,-,-)
+right child = (180,200,-,-)

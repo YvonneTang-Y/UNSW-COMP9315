@@ -1,0 +1,79 @@
+Examining cost of making changes in various file structures ...
+
+Heap file
+
+insert 
+- open page b-1 (pid of last page stored in e.g. catalog)
+- got space? add tuple to this page, "write" page b-1
+- no space? make new page b, add tuple to page b, "write" page b
+1 read + 1 write
+
+delete from R where x = k
+
+x is a unique attr
+
+for pid in 0 .. b-1 {
+   p = page(pid)
+   for tuples t in p {
+      if (t.x = k) {
+         remove tuple from page
+         write page
+         break out of outer loop
+      }
+   }
+}
+
+cost ...
+min = 1 read + (0 or 1) write
+max = b reads + 1 write
+
+
+x is not a unique attr
+
+for pid in 0 .. b-1 {
+   p = page(pid)
+   for tuples t in p {
+      if (t.x = k) {
+         remove tuple from page
+         flag page as modified
+      }
+   }
+   if page is modified, write page
+}
+
+cost = b reads + b_q writes
+
+
+Sorted or hash file with overflow pages
+
+insert
+min = 1 read + 1 write
+avg = (1 + avg_ov) reads + (1 or 2) writes
+max = (1 + max_ov) reads + 2 writes (one write for overflow pointer and the other for the data)
+
+
+delete from R where x = k
+
+
+x is a unique attr, file sorted on x
+
+binary search to find potential matching page
+scan page to see if any t.x = k
+if found, modify and write page
+
+
+x is not a unique attr, file sorted on x
+
+
+binary search to find potential matching page
+scan page to see if any t.x = k
+if found, modify and write page
+for pages going forward until no more t.x=k
+   scan page and modify if needed
+for pages going backwards until no more t.x=k
+   scan pages and modify
+
+0        1      2        3
+jjjjjjjj|jjjkkk|kkkkkkkm|mmmmmmmm
+
+log_2 b reads + b_q writes

@@ -1,0 +1,40 @@
+create table Courses (
+   id       integer primary key,
+   code     char(8),  -- e.g. 'COMP9315'
+   title    text,     -- e.g. 'Computing 1'
+   term     char(4),  -- e.g. '20T1', '20T2', etc
+   convenor integer references Staff(id),
+   constraint once_per_year unique (code,year)
+);
+
+1-d one
+select * from Courses where id=1234
+#solutions 0 or 1
+
+n-d one
+select * from Courses where code='COMP9315' and term='23T1'
+#solutions 0 or 1
+
+1-d pmr
+select * from Courses where code='COMP3311'
+#solutions >1
+select * from Courses where convenor=1234567
+#solutions >1
+
+n-d pmr
+select * from Courses where code='COMP9315' and convenor=1234567
+#solutions >1
+select * from Courses where term='23T1' and code like 'COMP%';
+#solutions >1
+
+1-d range
+select * from Courses where term >= '10s1' and term <= '16s2';
+#solutions ~10,000
+
+n-d range
+select * from Courses 
+where  code > 'COMP2041' and term between '10s1' and '15s2'
+#solutions ?? 
+
+pat
+select * from Courses where title like '%aba%'

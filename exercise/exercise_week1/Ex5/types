@@ -1,0 +1,42 @@
+create domain D as T0 [constraint]
+
+- creates a new type via a constrained version of an existing type
+- can be used simply to add new names for types
+
+create domain PosInt as integer constraint (value > 0);
+create domain Litres as float;
+
+
+
+create type T1 as enum (Label1, Label2, ...)
+
+create type Colour as enum
+	('red','yellow','green','blue','indigo','violet');
+
+- defines an order on values of the type: 'red' < yellow < green < ...
+
+create type Alert as enum ('yellow','red','runaway');
+
+
+
+create table People (
+	name text,
+	age PosInt,
+	favourite Colour,
+	state Alert
+);
+
+insert into People values ('John', 105, 'red', 'red');
+
+
+
+create type T2 as (A1 Type1, A2 Type2, ...)
+
+- creates new tuple types
+
+
+
+create type T3 as (input = F1, output = F2, ...)
+
+- create a new base type
+

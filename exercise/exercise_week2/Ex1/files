@@ -1,0 +1,32 @@
+Note: none of these OIDs will work in your PostgreSQL server
+
+# examine the content of the $PGDATA directory
+
+ls -l $PGDATA
+
+# find the directory containing the uni database
+
+select oid from pg_database where datname='uni';
+
+$PGDATA/base/16482
+
+# find the file in this directory for the People table
+
+select oid from pg_class where relname='people' and relkind='r';
+
+$PGDATA/base/16482/16505
+
+# examine the contents of the People file
+
+od -c $PGDATA/base/16482/16505
+strings $PGDATA/base/16482/16505
+
+# what are the other files in the directory?
+
+some are table data
+some are index data
+some are meta-data (*_fsm, *_vm)
+
+# are there forks in any of your databases?
+
+seems no for the uni database

@@ -1,0 +1,36 @@
+select * from R where x = 42;
+
+b = 8192
+
+
+lo = 0; hi = b-1;
+while lo < hi {
+   mid = lo+hi / 2
+   p = page(mid)
+   if (42 < p.min)
+      hi = mid-1
+   else if (42 > p.max)
+      lo = mid+1
+   else {
+      for each tuple t in page p {
+         if (t.x == 42) return t;
+      }
+      return NULL;
+   }
+}
+return NULL;
+
+iter 1
+lo = 0, hi = 8191, mid = 4096
+iter 2
+lo = 0, hi = 4095, mid = 2048
+iter 3
+lo = 0, hi = 1023, mid = 512
+etc etc.
+
+
+min reads = 1
+max reads = log_2 b
+avg reads = in range 1 .. log_2 b
+
+

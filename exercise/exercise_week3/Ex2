@@ -1,0 +1,19 @@
+FieldDesc is *not* a PostgreSQL data structure
+
+But if it were ... (offset,length,type)
+assume max length of tuples is 1024 in 8KB pages
+=> 7 tuples per page + directory
+
+offset = offset of field within tuple
+to address up to 1024 bytes, need 10 bits
+=> allow 16 bits = 2 bytes
+
+length = number of bytes in a field
+must be < 1024
+to measure up to 1024 bytes, need 10 bits
+=> allow 16 bits = 2 bytes
+
+type = oid of entry in pg_type tables
+=> 32-bit value = 4 bytes
+
+so FieldDesc is likely 8 bytes (short,short,int)

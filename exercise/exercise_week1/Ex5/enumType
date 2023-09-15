@@ -1,0 +1,18 @@
+What is the effect in the catalog of
+
+create type Mood as enum ('sad', 'happy');
+
+Result:
+- adds a tuple for the type itself in the pg_type table
+- adds two tuples in the pg_enum table, one for each value
+
+Running examples:
+
+=# select oid, typname, typlen, typtype from pg_type where typname='mood';
+
+
+=# select oid, * from pg_enum where enumtypid=16605;
+
+
+Note that names are mapped to all lower-case in the PostgreSQL catalog.
+Using typname='Mood' in the first query will produce no results.

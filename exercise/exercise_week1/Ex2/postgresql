@@ -1,0 +1,9 @@
+Exploring the PostgreSQL catalog and directories/files
+
+All user data lives under $PGDATA/base/
+
+Directories and files are named via pg_catalog OIDs
+
+To find directories for databases ...
+
+	select oid,datname from pg_database;

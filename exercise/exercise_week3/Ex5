@@ -1,0 +1,49 @@
+Cost of Search in Hashed File
+
+How many pages do we need to access?
+
+If search key is unique hash key,
+determine bucket id from h(k)
+
+pid = h(k) % b
+p = page(pid)
+for each tuple t in p {
+   if (t.x == k) return t
+}
+ovpid = ovflow(p)
+while (ovpid != NULL) {
+   ovp = page(ovpid)
+   for each tuple t in ovp {
+      if (t.x == k) return t
+   }
+   ovpid = ovflow(ovp)
+}
+return NULL
+
+min = 1,  max = 1 + max_ov
+
+
+If search key is not hash key and is not unique,
+need to scan entire file ...
+
+Scan with overflow pages involved
+
+result set = {}
+for pid in 0 .. b-1 {
+	p = page(pid)
+    for each tuple t in p {
+      if (t.x == k) add t to result set
+    }
+    ovpid = ovflow(p)
+    while (ovpid != NULL) {
+       ovp = page(ovpid)
+       for each tuple t in ovp {
+         if (t.x == k) add t to result set
+       }
+       ovpid = ovflow(ovp)
+    }
+}
+return result set
+
+
+min/max reads = b + b_ov

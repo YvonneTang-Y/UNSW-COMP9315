@@ -1,0 +1,27 @@
+select * from R
+
+Res(a,b,c) = R
+
+
+select a,b from R
+
+Res(a,b) = Proj[a,b]R
+
+
+select * from R where a > 5
+
+Res(a,b,c) = Sel[a > 5]R
+
+
+select * from R join S on R.a = S.y
+
+Res(a,b,c,x,y) = R Join[a=y] S
+
+
+select * from R join S on R.a = S.y where R.b < 2
+
+Res(a,b,c,x,y) = (Sel[b < 2]R) Join[a=y] S
+
+Res(a,b,c,x,y) = S Join[a=y] (Sel[b < 2]R)
+
+Res(a,b,c,x,y) = Sel[b < 2] (S Join[a=y] R)

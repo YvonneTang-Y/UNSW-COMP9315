@@ -1,0 +1,41 @@
+Cost of n-Way Merge Sort ...
+
+r = 2^20
+R = 62
+B = 4096
+H = 96
+D = nothing in this exercise
+
+tuple space = 4096 - 96 = 4000
+c = floor(4000 / 62) = 64 = 2^6
+
+b = r / c = 2^20 / 2^6 = 2^14 = 16384
+
+
+sorting with 9 buffers
+
+pass[0] = b reads + b writes
+  giving ceil(16384/9) = 1821 x 9-page sorted runs
+pass[1] = b reads + b writes
+  giving 9*8 = 72 page sorted runs
+pass[2]
+  giving 72*8 = 576 page sorted runs
+pass[3]
+  giving 576*8 = 4608 page sorted runs
+pass[4]
+  giving 4608*8 = fully sorted file
+
+b_0 = length of runs from pass[0]
+log_N(b_0) additional passes
+
+
+for 33 buffers
+
+pass[0] gives ceil(16384/33) = 497 sorted runs of length 33
+log_32(497) = 2 additional passes
+
+
+for 257 total buffers
+
+pass[0] gives ceil(16384/257) = 63 sorted runs of length 257
+log_256(63) = 1 additional pass

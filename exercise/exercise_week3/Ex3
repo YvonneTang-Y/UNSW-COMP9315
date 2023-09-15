@@ -1,0 +1,42 @@
+Cost of scan ...
+
+How many pages do we need to access?
+
+b pages (all of them)
+
+c = 100, r = 10000 => 100 pages => b = 100
+
+
+When do we need to scan
+* during sorting
+* select ... where x = 5
+
+
+Searching for tuples with a specific value
+for a non-unique field
+
+result set = {}
+for pid in 0 .. b-1 {
+	p = page(pid)
+    for each tuple t in p {
+      if (t.x == 42) add t to result set
+    }
+}
+return result set
+
+min/max reads = b
+
+
+Searching for tuples with a specific value
+for a unique field
+
+result set = {}
+for pid in 0 .. b-1 {
+	p = page(pid)
+    for each tuple t in p {
+      if (t.x == 42) { add t to result set; break; }
+    }
+}
+return result set
+
+min reads = 1, max reads = b
