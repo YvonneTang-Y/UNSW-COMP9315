@@ -10,6 +10,7 @@ An important aspect of this course is to give you a chance to explore the intern
 This assignment aims to give you
 * an understanding of how data is treated inside a DBMS
 * practice in adding a new base type to PostgreSQL
+  
 The goal is to implement a new data type for PostgreSQL, complete with input/output functions, comparison operators and the ability to build indexes on values of the type.
 
 #### Assignment2
@@ -17,4 +18,5 @@ This assignment aims to give you
 * an understanding of how data is organized inside a DBMS
 * practice in implementing simple relational operators
 * practice in implementing the memory buffer
+  
 The goal is to implement two relational operators, selection and join. Given the memory buffer slots and the page size, you need to implement your own memory buffer to read/write data files from hard drive.
